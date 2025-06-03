@@ -2,21 +2,19 @@
 import React from 'react';
 
 const DashboardHeader = () => {
-  const getCurrentGreeting = () => {
-    const hour = new Date().getHours();
-    if (hour < 12) return 'Good Morning';
-    if (hour < 18) return 'Good Afternoon';
-    return 'Good Evening';
-  };
-
   return (
-    <div className="mb-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">
-        {getCurrentGreeting()}, Owen
-      </h1>
-      <p className="text-lg text-gray-600">
-        Focus on the areas that need your attention
-      </p>
+    <div className="flex justify-between items-start mb-6">
+      <div>
+        <h1 className="text-2xl font-bold text-gray-900 mb-1">
+          Good Morning, Owen
+        </h1>
+        <p className="text-sm text-gray-600">
+          Focus on the areas that need your attention.
+        </p>
+      </div>
+      <div className="bg-white border border-gray-300 px-3 py-1 rounded text-sm text-gray-600">
+        📅 Week 9 of 15
+      </div>
     </div>
   );
 };

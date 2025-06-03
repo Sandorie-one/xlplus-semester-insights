@@ -2,23 +2,21 @@
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, X, Target, Brain } from 'lucide-react';
+import { ArrowRight, X } from 'lucide-react';
 
 const RecommendationsSection = () => {
   const [recommendations, setRecommendations] = useState([
     {
       id: 1,
-      icon: Target,
-      title: 'Targeted Review for Key Concepts',
-      description: 'Students showing mastery below 65% need foundational review to build confidence.',
+      title: 'Targeted Review for Key Concepts:',
+      description: 'Students struggled most with memory encoding and attention models, with mastery rates below 65%, indicating a need for stronger foundational review.',
       action: 'Update next lecture',
       visible: true
     },
     {
       id: 2,
-      icon: Brain,
-      title: 'Challenging Question Practice',
-      description: 'Low scores on higher-order thinking questions indicate need for more practice.',
+      title: 'Challenging Question Practice:',
+      description: 'Questions requiring higher-order thinking (e.g., analysis and application) had the lowest scores— especially short answers on attention theory.',
       action: 'Assign homework',
       visible: true
     }
@@ -34,40 +32,37 @@ const RecommendationsSection = () => {
 
   return (
     <div className="space-y-4">
-      <h2 className="text-2xl font-semibold text-gray-900">Recommendations</h2>
+      <h2 className="text-lg font-semibold text-gray-900">Recommendations</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        {visibleRecommendations.map((rec) => {
-          const IconComponent = rec.icon;
-          return (
-            <Card key={rec.id} className="shadow-sm hover:shadow-md transition-shadow duration-200">
-              <CardContent className="p-6">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <div className="bg-blue-100 p-2 rounded-lg">
-                      <IconComponent className="h-5 w-5 text-blue-600" />
-                    </div>
-                    <h3 className="font-semibold text-gray-900">{rec.title}</h3>
+        {visibleRecommendations.map((rec) => (
+          <Card key={rec.id} className="bg-white border border-gray-200">
+            <CardContent className="p-4">
+              <div className="flex items-start justify-between mb-3">
+                <div className="flex items-center gap-2">
+                  <div className="bg-gray-100 p-1 rounded">
+                    <div className="w-4 h-4 bg-gray-400 rounded" />
                   </div>
-                  <button
-                    onClick={() => dismissRecommendation(rec.id)}
-                    className="text-gray-400 hover:text-gray-600 transition-colors"
-                  >
-                    <X className="h-4 w-4" />
-                  </button>
+                  <span className="font-medium text-gray-900 text-sm">{rec.title}</span>
                 </div>
-                
-                <p className="text-gray-600 mb-4 text-sm">
-                  {rec.description}
-                </p>
-                
-                <Button className="w-full flex items-center justify-center gap-2">
-                  {rec.action}
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </CardContent>
-            </Card>
-          );
-        })}
+                <button
+                  onClick={() => dismissRecommendation(rec.id)}
+                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              </div>
+              
+              <p className="text-sm text-gray-600 mb-4">
+                {rec.description}
+              </p>
+              
+              <Button variant="outline" className="w-full flex items-center justify-center gap-2 text-gray-700 border-gray-300">
+                {rec.action}
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </div>
   );

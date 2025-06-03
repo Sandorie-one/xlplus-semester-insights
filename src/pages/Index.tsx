@@ -9,13 +9,13 @@ import AtRiskStudents from '../components/AtRiskStudents';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
-      <div className="max-w-7xl mx-auto space-y-6">
+    <div className="min-h-screen bg-gray-100 p-4">
+      <div className="max-w-7xl mx-auto space-y-4">
         {/* Header Section */}
         <DashboardHeader />
         
         {/* Exam and Topics Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <ExamPlanningCard />
           <ChallengingTopicsCard />
         </div>
@@ -24,7 +24,7 @@ const Index = () => {
         <RecommendationsSection />
         
         {/* Performance Insights and At-risk Students Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <div className="lg:col-span-2">
             <PerformanceInsights />
           </div>
