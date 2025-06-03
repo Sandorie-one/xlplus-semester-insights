@@ -16,7 +16,7 @@ const PerformanceInsights = () => {
   ];
 
   return (
-    <Card className="bg-white border border-gray-200">
+    <Card className="bg-dashboard-card border border-gray-200">
       <CardHeader className="pb-3">
         <CardTitle className="text-lg font-semibold text-gray-900 flex items-center gap-2">
           📊 Performance Insights

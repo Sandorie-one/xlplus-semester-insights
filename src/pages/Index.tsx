@@ -9,7 +9,7 @@ import AtRiskStudents from '../components/AtRiskStudents';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
+    <div className="min-h-screen bg-dashboard p-4">
       <div className="max-w-7xl mx-auto space-y-4">
         {/* Header Section */}
         <DashboardHeader />

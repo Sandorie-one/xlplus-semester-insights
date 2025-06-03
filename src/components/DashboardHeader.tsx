@@ -12,7 +12,7 @@ const DashboardHeader = () => {
           Focus on the areas that need your attention.
         </p>
       </div>
-      <div className="bg-white border border-gray-300 px-3 py-1 rounded text-sm text-gray-600">
+      <div className="bg-dashboard-item border border-gray-300 px-3 py-1 rounded text-sm text-gray-600">
         📅 Week 9 of 15
       </div>
     </div>

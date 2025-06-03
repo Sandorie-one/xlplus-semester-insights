@@ -35,11 +35,11 @@ const RecommendationsSection = () => {
       <h2 className="text-lg font-semibold text-gray-900">Recommendations</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {visibleRecommendations.map((rec) => (
-          <Card key={rec.id} className="bg-white border border-gray-200">
+          <Card key={rec.id} className="bg-dashboard-card border border-gray-200">
             <CardContent className="p-4">
               <div className="flex items-start justify-between mb-3">
                 <div className="flex items-center gap-2">
-                  <div className="bg-gray-100 p-1 rounded">
+                  <div className="bg-dashboard-item p-1 rounded">
                     <div className="w-4 h-4 bg-gray-400 rounded" />
                   </div>
                   <span className="font-medium text-gray-900 text-sm">{rec.title}</span>
@@ -56,7 +56,7 @@ const RecommendationsSection = () => {
                 {rec.description}
               </p>
               
-              <Button variant="outline" className="w-full flex items-center justify-center gap-2 text-gray-700 border-gray-300">
+              <Button className="w-full flex items-center justify-center gap-2 bg-dashboard-primary text-black hover:bg-dashboard-primary/90 border-0">
                 {rec.action}
                 <ArrowRight className="h-4 w-4" />
               </Button>

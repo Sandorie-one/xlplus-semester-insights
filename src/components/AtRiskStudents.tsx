@@ -12,7 +12,7 @@ const AtRiskStudents = () => {
   ];
 
   return (
-    <Card className="bg-white border border-gray-200">
+    <Card className="bg-dashboard-card border border-gray-200">
       <CardHeader className="pb-3">
         <CardTitle className="text-lg font-semibold text-gray-900 flex items-center gap-2">
           ⚠️ At-risk students
@@ -36,7 +36,7 @@ const AtRiskStudents = () => {
           ))}
         </div>
         
-        <Button variant="outline" className="w-full text-gray-700 border-gray-300">
+        <Button className="w-full bg-dashboard-secondary text-white hover:bg-dashboard-secondary/90 border-0">
           Email all at-risk students
         </Button>
       </CardContent>

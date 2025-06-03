@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -49,6 +50,13 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom dashboard colors */
+    --dashboard-bg: #EDECF6;
+    --dashboard-card: #FFFFFF;
+    --dashboard-item: #F6F5FB;
+    --dashboard-primary: #FFCE00;
+    --dashboard-secondary: #512EAB;
   }
 
   .dark {
@@ -97,5 +105,44 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Custom dashboard utility classes */
+@layer utilities {
+  .bg-dashboard {
+    background-color: var(--dashboard-bg);
+  }
+  
+  .bg-dashboard-card {
+    background-color: var(--dashboard-card);
+  }
+  
+  .bg-dashboard-item {
+    background-color: var(--dashboard-item);
+  }
+  
+  .bg-dashboard-primary {
+    background-color: var(--dashboard-primary);
+  }
+  
+  .bg-dashboard-secondary {
+    background-color: var(--dashboard-secondary);
+  }
+  
+  .text-dashboard-primary {
+    color: var(--dashboard-primary);
+  }
+  
+  .text-dashboard-secondary {
+    color: var(--dashboard-secondary);
+  }
+  
+  .border-dashboard-primary {
+    border-color: var(--dashboard-primary);
+  }
+  
+  .border-dashboard-secondary {
+    border-color: var(--dashboard-secondary);
   }
 }

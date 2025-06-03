@@ -13,7 +13,7 @@ const ExamPlanningCard = () => {
   ];
 
   return (
-    <Card className="bg-white border border-gray-200">
+    <Card className="bg-dashboard-card border border-gray-200">
       <CardHeader className="pb-3">
         <CardTitle className="text-lg font-semibold text-gray-900 flex items-center gap-2">
           📊 Exam Planning
@@ -69,7 +69,7 @@ const ExamPlanningCard = () => {
           Consider reducing Risk Analysis to <strong>35%</strong>, based on coverage in the course so far.
         </p>
         
-        <Button variant="outline" className="w-full text-gray-700 border-gray-300">
+        <Button className="w-full bg-dashboard-primary text-black hover:bg-dashboard-primary/90 border-0">
           Modify exam
         </Button>
       </CardContent>
