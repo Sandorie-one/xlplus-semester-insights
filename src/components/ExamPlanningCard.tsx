@@ -69,9 +69,11 @@ const ExamPlanningCard = () => {
           Consider reducing Risk Analysis to <strong>35%</strong>, based on coverage in the course so far.
         </p>
         
-        <Button className="w-full bg-dashboard-primary text-black hover:bg-dashboard-primary/90 border-0">
-          Modify exam
-        </Button>
+        <div className="flex justify-start">
+          <Button className="bg-dashboard-secondary text-white hover:bg-dashboard-secondary/90 border-0">
+            Modify exam
+          </Button>
+        </div>
       </CardContent>
     </Card>
   );

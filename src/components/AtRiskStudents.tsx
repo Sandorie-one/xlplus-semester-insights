@@ -36,9 +36,11 @@ const AtRiskStudents = () => {
           ))}
         </div>
         
-        <Button className="w-full bg-dashboard-secondary text-white hover:bg-dashboard-secondary/90 border-0">
-          Email all at-risk students
-        </Button>
+        <div className="flex justify-start">
+          <Button className="bg-dashboard-secondary text-white hover:bg-dashboard-secondary/90 border-0">
+            Email all at-risk students
+          </Button>
+        </div>
       </CardContent>
     </Card>
   );

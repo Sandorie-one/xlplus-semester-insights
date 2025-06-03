@@ -56,10 +56,12 @@ const RecommendationsSection = () => {
                 {rec.description}
               </p>
               
-              <Button className="w-full flex items-center justify-center gap-2 bg-dashboard-primary text-black hover:bg-dashboard-primary/90 border-0">
-                {rec.action}
-                <ArrowRight className="h-4 w-4" />
-              </Button>
+              <div className="flex justify-start">
+                <Button className="flex items-center gap-2 bg-dashboard-secondary text-white hover:bg-dashboard-secondary/90 border-0">
+                  {rec.action}
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </div>
             </CardContent>
           </Card>
         ))}

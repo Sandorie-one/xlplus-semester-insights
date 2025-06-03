@@ -24,9 +24,11 @@ const ChallengingTopicsCard = () => {
           </p>
         </div>
         
-        <Button className="w-full bg-dashboard-secondary text-white hover:bg-dashboard-secondary/90 border-0">
-          Assign Structured Study
-        </Button>
+        <div className="flex justify-start">
+          <Button className="bg-dashboard-secondary text-white hover:bg-dashboard-secondary/90 border-0">
+            Assign Structured Study
+          </Button>
+        </div>
       </CardContent>
     </Card>
   );
